@@ -1,0 +1,25 @@
+{
+    "resultLoginPage":[
+        {
+            "_id":1,
+            "registerId":"1ST19CS221",
+            "studentName":"Navya DK",
+            "FatherName":"Krishnamraju DE",
+            "CollegeName":"BGS institute of technology"
+        },
+        { 
+            "_id":2,
+            "registerId":"1ST19CV103",
+            "studentName":"Sowmya DK",
+            "FatherName":"Ajay Kumar",
+            "CollegeName":"BGS institute of technology"
+        },
+        { 
+            "_id":3,
+            "registerId":"1ST19EC406",
+            "studentName":"Sam Smith",
+            "FatherName":"Robert Mark",
+            "CollegeName":"BGS institute of technology"
+        }
+    ]
+}

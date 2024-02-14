@@ -1,14 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {createBrowserRouter,createRoutesFromElements,
+  Route,RouterProvider} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import HomeScreen from './Components/Screens/HomeScreen';
+import AboutUs from './Components/Screens/AboutUs';
+import Admission from './Components/Screens/Admission';
+//import Circular from './Components/Screens/Circular';
+import ResultLoginPage from './Components/Screens/ResultLoginPage';
+import ResultPage from './Components/Screens/ResultPage';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<App/>}>
+       <Route index={HomeScreen} path='/' element={<HomeScreen/>}/>
+       <Route path='/about' element={<AboutUs/>}/>
+       <Route path='/admission' element={<Admission/>}/>
+       <Route path='/result/loginpage' element={<ResultLoginPage/>}/>
+       <Route path='/resultpage/:id' element={<ResultPage/>}/>
+       
+    </Route>
+  )
+)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router= {router} />
   </React.StrictMode>
 );
 
